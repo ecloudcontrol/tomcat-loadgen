@@ -5,13 +5,13 @@ app:
 
 build:
   version: 0.3
-  env: DEV
+  env: PROD
   build_file: pom.xml
   output_files: output/*.war
   image_template: tomcat9
 
 deploy:
-  context: rejith/DEV
+  context: vv/PROD
   replicas: 4
   port: 8080
   strategy : rolling
